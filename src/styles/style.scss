@@ -1,0 +1,165 @@
+@import "https://fonts.googleapis.com/css2?family=Abel&display=swap";
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Abel', sans-serif;
+  font-weight: 400;
+}
+
+.posts {
+  padding: 25px 40px;
+  color: var(--primary-text);
+  &_header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+  &_title {
+    font-size: 36px;
+    line-height: 46px;
+  }
+  &_add_button {
+    padding: 14px 32px;
+    color: var(--primary-white);
+    font-size: 18px;
+    line-height: 23px;
+    background-color: var(--primary-red);
+    border: none;
+    border-radius: 4px;
+    box-shadow: var(--primary-shadow);
+    cursor: pointer;
+    &:hover {
+      background-color: var(--secondary-red);
+      transition: .2s;
+    }
+    &:disabled {
+      background-color: var(--secondary-white);
+    }
+  }
+  &_table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 18px;
+    line-height: 23px;
+    tr {
+      height: 40px;
+      border-bottom: 1px solid var(--secondary-white);
+    }
+    th {
+      width: 50%;
+      text-align: left;
+      padding: 10px;
+      color: var(--secondary-text);
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
+    td {
+      padding: 10px;
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.popup {
+  position: fixed;
+  width: 500px;
+  height: 616px;
+  top: calc(50% - 340px);
+  right: calc(50% - 250px);
+  padding: 40px 30px;
+  background-color: var(--primary-white);
+  box-shadow: var(--primary-shadow) 0px 5px 15px;
+  border-radius: 4px;
+  &_header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 55px;
+  }
+  &_title {
+    font-size: 35px;
+    line-height: 45px;
+  }
+  &_label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 20px;
+    line-height: 25px;
+  }
+  &_container {
+    margin-bottom: 90px;
+  }
+  &_input {
+    display: block;
+    width: 286px;
+    padding: 10px;
+    font-size: 14px;
+    line-height: 18px;
+    border: 1px solid var(--secondary-white);
+    border-radius: 4px;
+    &:focus {
+      outline: none;
+      border: 1px solid var(--primary-border-box);
+    }
+    &_container {
+      margin-bottom: 18px;
+      &:last-child {
+        margin-bottom: 0px;
+      }
+    }
+    &::placeholder {
+      color: var(--secondary-text)
+    }
+  }
+  &_textarea {
+    width: 425px;
+    height: 114px;
+    resize: none;
+  }
+  &_selector {
+    cursor: pointer;
+    &_item {
+      display: inline-block;
+      padding: 10px;
+      cursor: pointer;
+    }
+  }
+  &_add_button {
+    display: block;
+    color: var(--primary-white);
+    font-size: 20px;
+    line-height: 25px;
+    float: right;
+  }
+  &_close_button {
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    background-image: url("../assets/closeIcon.svg");
+    background-size: cover;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    &:hover {
+      background-color: var(--primary-red);
+      transition: .2s;
+    }
+  }
+  .error {
+    border: 1px solid var(--primary-red);
+  }  
+}
+
+.transition-enter-active,
+.transition-leave-active {
+  transition: all 0.5s ease;
+}
+.transition-enter-from,
+.transition-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}

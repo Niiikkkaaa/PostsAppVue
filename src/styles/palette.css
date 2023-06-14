@@ -1,0 +1,14 @@
+:root {
+  --primary-red: #F96240;
+  --secondary-red: #d03c3c;
+
+  --primary-white: #ffffff;
+  --secondary-white: #CFCFCF;
+
+  --primary-text: #454545;
+  --secondary-text: #979797;
+
+  --primary-shadow: rgba(0, 0, 0, 0.4);
+
+  --primary-border-box: #aeadad;
+}
